@@ -125,11 +125,7 @@ public class Main {
         position.setCol(column);
         dungeon.put(position.getName(), position);
 
-//        traverse(dungeon, position.getN(), row - 1, column, visited);
-//        traverse(dungeon, position.getS(), row + 1, column, visited);
-//        traverse(dungeon, position.getE(), row, column + 1, visited);
-//        traverse(dungeon, position.getW(), row, column - 1, visited);
-
+        // consider the space needed for - and | arrows in the console output
         traverse(dungeon, position.getN(), row - 2, column, visited);
         traverse(dungeon, position.getS(), row + 2, column, visited);
         traverse(dungeon, position.getE(), row, column + 2, visited);
