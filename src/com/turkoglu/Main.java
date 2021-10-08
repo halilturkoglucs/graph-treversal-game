@@ -167,19 +167,19 @@ public class Main {
             if (v != position) dungeonMapForConsole[row][col] = v.getName();
             else dungeonMapForConsole[row][col] = "**";
 
-            if (v.getE() != null) {
+            if (v.getE() != null && (col + 1) < dungeonMapForConsole[0].length) {
                 dungeonMapForConsole[row][col+1] = "-";
             }
 
-            if (v.getW() != null) {
+            if (v.getW() != null && (col-1) >= 0) {
                 dungeonMapForConsole[row][col-1] = "-";
             }
 
-            if (v.getN() != null) {
+            if (v.getN() != null && (row-1) >= 0) {
                 dungeonMapForConsole[row-1][col] = " | ";
             }
 
-            if (v.getS() != null) {
+            if (v.getS() != null && (row + 1) < dungeonMapForConsole.length) {
                 dungeonMapForConsole[row+1][col] = " | ";
             }
         });
